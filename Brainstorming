@@ -1,0 +1,11 @@
+-----Brainstorming-----
+
+Objetivo: Tirar ideas de que cosas se nos ocurre que podemos obtener en función del dataset que tenemos. 
+¿Que podríamos pedirle a un dataset que contiene propiedades en venta en México entre los años 2012 y 2016 que contiene? 
+
+- Cual es la ciudad con precios mas caros/baratos
+- Cual es la provincia con precios mas caros/baratos
+- Variación del precio en función de la lat (Norte-Sur)
+- Variación del precio en función de la long (Este-Oeste)
+- Cuantos departamentos de una habitación tiene 2 baños? (Es flashero, pero mi depto tiene dos ambientes y dos baños, es clave para cuando hago algo, que no pasen a mi cuarto y creo que le serviría a zonaprop tener este dato como argumento de venta)
+- Cuantos departamentos de 2 habitaciones o mas estan cerca de una escuela? (Alguien que le interesa estar cerca de un colegío es porque tiene hijos, por lo que puede haber una relación ahi...o no, pero podemos verlo)
