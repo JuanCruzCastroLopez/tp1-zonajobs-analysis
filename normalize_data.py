@@ -28,6 +28,8 @@ def getNormalizedDataset():
 		parse_dates=['fecha'])
 	pd.set_option('display.float_format', '{:.2f}'.format)
 
+	df['precio_m2'] = df['precio']/df['metrostotales']
+    
 	# Elimino columnas innecesarias.
 	df.drop(['direccion','idzona','lat','lng'], axis=1, inplace=True)
 
@@ -70,13 +72,12 @@ def getNormalizedDataset():
 	df['antiguedad'].fillna(0, inplace=True)
 
 	# Limpio los outliers
-	df = df[~df.groupby('tipodepropiedad')['precio'].apply(is_outlier)]
+	df = df[~df.groupby('tipodepropiedad')['precio_m2'].apply(is_outlier)]
 
 	VALOR_CAMBIO_A_DOLAR = 19.54
 
 	# Nuevas columnas
 	df['precio_dolar'] = df['precio']/VALOR_CAMBIO_A_DOLAR
-	df['precio_m2'] = df['precio']/df['metrostotales']
 	df['extras'] = df['garages']+df['piscina']+df['usosmultiples']+df['gimnasio']
 
 	return df
