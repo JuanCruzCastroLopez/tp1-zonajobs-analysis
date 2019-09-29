@@ -78,7 +78,7 @@ def getNormalizedDataset():
     
 	# Hay 45000 registros que tienen este problema. La antiguedad no se puede seleccionar en base a un grupo porque estaría, probablemente, dando informacion falsa.
 	# Consideramos que todos los que vienen sin información de antiguedad, es porque son nuevos.
-	df['antiguedad'].fillna(0, inplace=True)
+	# df['antiguedad'].fillna(0, inplace=True)
 
 	VALOR_CAMBIO_A_DOLAR = 19.54
 
